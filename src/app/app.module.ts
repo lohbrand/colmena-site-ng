@@ -1,20 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { SharedModule } from './shared.module';
+
+import { ApiService } from './services/api.service';
+
+import { AppRoutingModule } from './app.routing';
+import { AppComponent, NotFoundComponent } from './app.component';
 
 @NgModule({
   declarations: [
+    NotFoundComponent,
     AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    SharedModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    ApiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

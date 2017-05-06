@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="section">
+    <h3>
+      <a href="" [routerLink]="[item.id]">{{item.name}}</a>
+    </h3>
+    <h6>{{item.date | date}}</h6>
+    <h6>{{item.location}}</h6>
+    <img src="{{item.image}}" alt="{{item.title}}">
+    <p [innerHtml]="item.description"></p>
+  </div>
+</div>
