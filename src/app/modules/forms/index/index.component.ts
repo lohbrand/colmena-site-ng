@@ -7,10 +7,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IndexComponent {
 
+  loading = true;
   formId: string;
 
   constructor(private route: ActivatedRoute) {
     this.formId = this.route.snapshot.data['formId'];
+    this.loading = false
   }
 
 }

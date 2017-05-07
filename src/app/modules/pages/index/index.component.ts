@@ -13,7 +13,7 @@ import { ApiService } from '../../../services/api.service';
 export class IndexComponent implements OnInit {
 
   loading = true;
-  item: any[] = [];
+  item: any = {};
   itemId: string;
 
   constructor(
